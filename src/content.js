@@ -12,7 +12,7 @@ String.prototype.rsplit = function(sep, maxsplit) {
     return maxsplit ? [ split.slice(0, -maxsplit).join(sep) ].concat(split.slice(-maxsplit)) : split;
 }
 
-function foo() {
+function handle_page_load() {
     var service='breach'
     var webpage=window.location.hostname.rsplit(".", 2)[1]
     chrome.runtime.sendMessage({service: service, webpage: webpage}, (response) => {
@@ -20,6 +20,5 @@ function foo() {
             console.log(response);
         }
     });
-    console.log('Inside foo in content.js')
 }
-window.addEventListener('load', foo);
+window.addEventListener('load', handle_page_load);
