@@ -7,22 +7,19 @@
  * This file contains javascript code that is executed
  * everytime a webpage loads over HTTP or HTTPS.
  */
-
-var elements = document.getElementsByTagName('*');
-
-for (var i = 0; i < elements.length; i++) {
-    var element = elements[i];
-
-    for (var j = 0; j < element.childNodes.length; j++) {
-        var node = element.childNodes[j];
-
-        if (node.nodeType === 3) {
-            var text = node.nodeValue;
-            var replacedText = text.replace(/cal/gi, "butt"); // replaces "cal," "Cal", etc. with "butt"
-
-            if (replacedText !== text) {
-                element.replaceChild(document.createTextNode(replacedText), node);
-              }
-        }
-    }
+String.prototype.rsplit = function(sep, maxsplit) {
+    var split = this.split(sep);
+    return maxsplit ? [ split.slice(0, -maxsplit).join(sep) ].concat(split.slice(-maxsplit)) : split;
 }
+
+function foo() {
+    var service='breach'
+    var webpage=window.location.hostname.rsplit(".", 2)[1]
+    chrome.runtime.sendMessage({service: service, webpage: webpage}, (response) => {
+        if (response != undefined && response != "") {
+            console.log(response);
+        }
+    });
+    console.log('Inside foo in content.js')
+}
+window.addEventListener('load', foo);
