@@ -2,26 +2,26 @@
 
 ## Overview
 
-Congratulations! You've chosen this hackpack, and you're well on your way to building a super cool product!
+This is a chrome extension that rates websites based on pawned history from https://haveibeenpwned.com/ and other metrics.
 
-In this hackpack, you will build a chrome extension that replaces the content on webpages according to customizable rules. Your main task is to replace all instances of the text "cal" with the text "butt" on all webpages.
+Currently it replaces the content on webpages according to customizable rules. Your main task is to replace all instances of the text "cal" with the text "butt" on all webpages. We are going to modify the extension to report security scores.
 
 It utilizes some Javascript and HTML to edit website displays, and can be easily changed and altered to suit other purposes.
 
 ## Getting Started
 
 ### Download and unzip starter code
-Download and unzip the [starter code] (https://github.com/TreeHacks/hackpack-chrome-ext)
+Download and unzip the [starter code] (https://github.com/vishalmohanty/hackpack-chrome-ext)
 
-Alternatively, if you are a Git master, you can sync with [our Git repository](https://github.com/TreeHacks/hackpack-chrome-ext)  over HTTPS or SSH. Note: If you aren't familiar with Git, or don't know what the following lines would do, don't execute the following commands!
+Alternatively, if you are a Git master, you can sync with [our Git repository](https://github.com/vishalmohanty/hackpack-chrome-ext)  over HTTPS or SSH. Note: If you aren't familiar with Git, or don't know what the following lines would do, don't execute the following commands!
 
 ```
 # From Terminal.app or equivalent...
 
 # Clone via HTTPS
-$ git clone (https://github.com/TreeHacks/hackpack-chromeExt)
+$ git clone (https://github.com/vishalmohanty/hackpack-chrome-ext)
 # or SSH
-$ git clone git@github.com:TreeHacks/hackpack-chromeExt.git
+$ git clone git@github.com:vishalmohanty/hackpack-chromeExt.git
 ```
 
 ### Download Google Chrome
