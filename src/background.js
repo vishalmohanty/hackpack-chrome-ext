@@ -68,7 +68,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             .catch(error => console.log('Error:', error));
 
             // Get news articles by searching "webpage breach"
-            const news_api_key = 'a9d2c1e7fba74c8db7d7c2a23c10aa9e';
+            const news_api_key = '43899ab2740f419e87c9eb3f92c1c515';
             const news_url = 'https://newsapi.org/v2/everything?q=' + webpage + '%20breach&apiKey=' + news_api_key;
             const promise2 = fetch(news_url, {
                 headers: {
