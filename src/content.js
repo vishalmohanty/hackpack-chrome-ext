@@ -15,9 +15,9 @@ String.prototype.rsplit = function(sep, maxsplit) {
 function handle_page_load() {
     var service='breach'
     var webpage=window.location.hostname.rsplit(".", 2)[1]
-    chrome.runtime.sendMessage({service: service, webpage: webpage}, (response) => {
+    chrome.runtime.sendMessage({service: service, webpage: webpage}, function(response) {
         if (response != undefined && response != "") {
-            console.log(response);
+            console.log('Response: ', response);
         }
     });
 }
