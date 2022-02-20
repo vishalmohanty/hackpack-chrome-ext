@@ -45,7 +45,7 @@ Additionally, pay close attention to the **Reload** link.
 
 ### Credit
 
-Credit for the idea goes to the hackpacks from TreeHacks https://www.treehacks.com/.
+This is a fork from hackpacks from TreeHacks https://www.treehacks.com/.
 
 ### License
 MIT
