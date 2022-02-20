@@ -6,10 +6,28 @@
   </head>
   <body>
     <div class="container">
+      
       <div class="wrapper">
-        <h2 class="title">adobe.com</h2>
-        <div class="circle">
-          <h1>80%</h1>
+        <div class ="score">
+          <div class="outerCircle">
+            <div class="innerCircle">
+              <div id="number">
+    
+                
+    
+              </div>
+            </div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+            <defs>
+               <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#41e01e" />
+                  <stop offset="100%" stop-color="#41e01e" />
+               </linearGradient>
+            </defs>
+            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+    </svg>
+    
         </div>
       </div>
 
@@ -38,7 +56,7 @@
         </div>
       </div>
     </div>
-
+    <script src="score.js"></script>"
     <script src="popup.js"></script>
   </body>
 </html>

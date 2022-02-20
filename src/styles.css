@@ -1,3 +1,4 @@
+
 :root {
   --gray-50: #f9fafb;
   --gray-100: #f3f4f6;
@@ -28,6 +29,7 @@ body {
   min-height: 600px; */
   /* margin: auto; */
   color: var(--gray-600);
+  background: #e3edf7;
 }
 
 .container {
@@ -48,19 +50,76 @@ body {
   margin-bottom: 24px;
 }
 
-.circle {
+
+circle {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 180px;
-  height: 180px;
-  border-radius: 999px;
-  color: var(--blue-600);
-  background-color: var(--blue-75);
+  fill:none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim 2s linear forwards;
+
 }
 
 .circle h1 {
   font-size: 48px;
+}
+.outerCircle {
+  position: absolute;
+ 
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),-6px -6px 10px -1px rgba(255, 255, 255, 0.7)
+  
+}
+
+.innerCircle{
+  position: absolute;
+ 
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  box-shadow: 
+  inset 4px 4px 6px -1px rgba(0,0,0,0.2), 
+  inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+  -0.5px -0.5px 0px rgba(255,255,255,1),
+  0.5px 0.5px 0px rgba(0,0,0,0.15),
+  0px 12px 10px -10px rgba(0,0,0,0.05);
+  
+
+
+
+
+}
+#number {
+  position: absolute;
+  font-weight: 600;
+  color: #555;
+
+}
+svg {
+  position: relative;
+
+  top: 0;
+  left: 0;
+}
+
+
+
+@keyframes anim{
+  100% {
+      stroke-dashoffset: 165;
+  }
+  
 }
 
 .info {
