@@ -1,4 +1,4 @@
-# Mr.Watchdog <a href="Watchdog"><img src="assets/watchdog.png" height=30></a> @ 2022
+# Mr. Watchdog <a href="Watchdog"><img src="assets/watchdog.png" height=30></a> @ 2022
 
 Created by @vishalmohanty, @Victor-Peraza, @mattbal and @kinnarijpatel.
 
