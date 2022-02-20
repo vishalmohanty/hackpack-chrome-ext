@@ -2,6 +2,32 @@
  * This handles the messages from page loads coming from content.js
  */
 
+function get_score(json_obj) {
+    var score = 100
+    if (json_obj.hasOwnProperty('hibp')) {
+        var hibp = json_obj['hibp']
+        if (hibp['IsMalware']) {
+            score -= 30;
+        }
+        if (hibp['IsSpam']) {
+            score -= 5;
+        }
+        if (hibp['DataClasses'].includes('Passwords')) {
+            score -= 20;
+        }
+        if (hibp['DataClasses'].includes('Usernames')) {
+            score -= 5;
+        }
+        if (hibp['DataClasses'].includes('Password hints')) {
+            score -= 10;
+        }
+        if (hibp['DataClasses'].includes('Email addresses')) {
+            score -= 2;
+        }
+    }
+    return score
+}
+
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     console.log('Reached background');
     const webpage = request.webpage;
@@ -40,8 +66,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
                 console.log(dataFromPromise2);
                 const json_obj = {
                     "hibp": dataFromPromise1,
-                    "recent_news": dataFromPromise2
+                    "recent_news": dataFromPromise2,
                 };
+                const score = get_score(json_obj)
+                json_obj["score"] = score
                 var obj = {}
                 obj[webpage] = json_obj
                 chrome.storage.local.set(obj, function(){
