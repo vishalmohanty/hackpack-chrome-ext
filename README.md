@@ -4,7 +4,7 @@ Created by @vishalmohanty, @Victor-Peraza, @mattbal and @kinnarijpatel.
 
 ## Overview
 
-This is a chrome extension that rates websites based on pawned history from https://haveibeenpwned.com/ and other metrics.
+This is a chrome extension that rates websites based on pawned history from https://haveibeenpwned.com/ and other metrics. It also reports recent breach information from https://newsapi.org/.
 
 It shows the breach history of a website, if it is known to spread spam, download malware, and whether it uses a secure connection in connecting to client browsers.
 
