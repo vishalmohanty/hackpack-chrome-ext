@@ -8,6 +8,10 @@ This is a chrome extension that rates websites based on pawned history from http
 
 It shows the breach history of a website, if it is known to spread spam, download malware, and whether it uses a secure connection in connecting to client browsers.
 
+We employ a heuristic based scoring mechanism where if a website has never been compromised, we give it a score of 100. If sensitive information has been compromised, we apply penalties depending on the severity of the compromise. For example, Adobe was breached in 2013 where email addresses, passwords were leaked amongst a bunch of other sensitive information.
+
+<a href="Adobe"><img src="assets/adobe.png"></a>
+
 ## Getting Started
 
 ### Clone the repo
