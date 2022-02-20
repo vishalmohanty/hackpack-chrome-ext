@@ -1,0 +1,111 @@
+body {
+    
+    font-family: Arial, Helvetica, sans-serif;
+  
+
+  
+  
+    min-width: 500px;
+    min-height: 600px;
+    background-color: #f8f8ff;
+    margin:auto;
+    border-radius: 5px;
+    
+    
+   
+ 
+  
+  }
+
+  h1 {
+    font-size: 100%;
+    border-radius: 5px;
+    
+ 
+
+  }
+
+  .container {
+      position: absolute;
+    
+      
+      width:fit-content;
+      height:300px;
+      background-color: rgb(27, 10, 255);
+      color: rgb(92, 187, 147);
+      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.726);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+
+
+  }
+
+  .center {
+    display: inline-block;
+    align-items: center; /* vertical centering if flex-direction: row */
+    justify-content: center;
+    min-height: 100px;
+    margin-top: 400px;
+    
+    
+   
+ 
+   
+  }
+
+.center2 {
+  
+    display: inline-block;
+    align-items: center; /* vertical centering if flex-direction: row */
+    justify-content: center;
+
+
+
+ 
+}
+
+  
+
+ .bttns{
+    background-color: rgb(27, 10, 255);
+    width: 220px;
+    height: 45px;
+    border-radius: 8px;
+    border-width: 0px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin-left: 20px;
+    font-family: Arial;
+    box-shadow: 1px 1px 3px rgb(0, 0, 0);
+    
+ }
+
+ .currentDomain {
+     min-height: 10px;
+     text-align: center;
+     font-size: medium;
+     color: black;
+     
+ 
+
+ }
+
+ .circle {
+     position: absolute;
+     top: 70px;
+     left: 150px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 60px;
+   
+
+     width: 200px;
+     height: 200px;
+     border-radius: 100px;
+     color: blue;
+     background-color: #f8f8ff;
+  
+     
+ }
