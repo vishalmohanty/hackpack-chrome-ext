@@ -1,4 +1,4 @@
-# Cal to Butt: Chrome Extension Hackpack @ Mr.Watchdog 2022
+# Mr.Watchdog @ 2022
 
 Created by @vishalmohanty, @Victor-Peraza, @mattbal and @kinnarijpatel.
 
