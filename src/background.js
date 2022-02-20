@@ -6,7 +6,7 @@
 function get_score(json_obj) {
     let score = 100;
 
-    if (json_obj.hasOwnProperty("hibp")) {
+    if (json_obj.hasOwnProperty("hibp") && json_obj["hibp"] !== undefined) {
         var hibp = json_obj["hibp"]
         if (hibp.hasOwnProperty("IsMalware") && hibp["IsMalware"]) {
             score -= 30;
@@ -84,6 +84,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             Promise.all([promise1, promise2]).then(data => {
                 const dataFromPromise1 = data[0];
                 const dataFromPromise2 = data[1];
+                console.log('dataFromPromise1 ', dataFromPromise1, ' dataFromPromise2 ', dataFromPromise2);
                 console.log(dataFromPromise1);
                 console.log(dataFromPromise2);
                 const json_obj = {

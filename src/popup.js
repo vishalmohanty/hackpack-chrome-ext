@@ -14,8 +14,8 @@ const setDOMInfo = info => {
             document.getElementById("breaches").innerHTML = result[webpage]["hibp"]["BreachDate"];
             document.getElementById("c-accounts").innerHTML = result[webpage]["hibp"]["PwnCount"];
             document.getElementById("c-data").innerHTML = result[webpage]["hibp"]["DataClasses"];
-            document.getElementById("spam").innerHTML = result[webpage]["hibp"]["IsSpamList"];
-            document.getElementById("malware").innerHTML = result[webpage]["hibp"]["IsMalware"];
+            document.getElementById("spam").innerHTML = result[webpage]["hibp"]["IsSpamList"] === true ? 'Yes' : 'No';
+            document.getElementById("malware").innerHTML = result[webpage]["hibp"]["IsMalware"] === true ? 'Yes' : 'No';;
         }
         if (result[webpage].hasOwnProperty("recent_news")) {
             if (result[webpage]["recent_news"].hasOwnProperty("articles")) {
