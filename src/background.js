@@ -6,23 +6,26 @@ function get_score(json_obj) {
     var score = 100
     if (json_obj.hasOwnProperty('hibp')) {
         var hibp = json_obj['hibp']
-        if (hibp['IsMalware']) {
+        if (hibp.hasOwnProperty('IsMalware') && hibp['IsMalware']) {
             score -= 30;
         }
-        if (hibp['IsSpam']) {
+        if (hibp.hasOwnProperty('IsSpam') && hibp['IsSpam']) {
             score -= 5;
         }
-        if (hibp['DataClasses'].includes('Passwords')) {
-            score -= 20;
-        }
-        if (hibp['DataClasses'].includes('Usernames')) {
-            score -= 5;
-        }
-        if (hibp['DataClasses'].includes('Password hints')) {
-            score -= 10;
-        }
-        if (hibp['DataClasses'].includes('Email addresses')) {
-            score -= 2;
+        debugger;
+        if (hibp.hasOwnProperty('DataClasses')) {
+            if (hibp['DataClasses'].includes('Passwords')) {
+                score -= 20;
+            }
+            if (hibp['DataClasses'].includes('Usernames')) {
+                score -= 5;
+            }
+            if (hibp['DataClasses'].includes('Password hints')) {
+                score -= 10;
+            }
+            if (hibp['DataClasses'].includes('Email addresses')) {
+                score -= 2;
+            }
         }
     }
     return score
