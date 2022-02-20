@@ -1,34 +1,51 @@
 /** File: background.js
  * This handles the messages from page loads coming from content.js
- */
+ s*/    
+ setInterval( function() { get_score(JSON); }, 30);
 
 function get_score(json_obj) {
-    var score = 100
+    let number = document.getElementById("number");
+    let score = 100;
+
     if (json_obj.hasOwnProperty('hibp')) {
         var hibp = json_obj['hibp']
-        if (hibp.hasOwnProperty('IsMalware') && hibp['IsMalware']) {
+        if (hibp.hasOwnProperty('IsMalware') && hibp['IsMalware'] && score != 0) {
             score -= 30;
-        }
-        if (hibp.hasOwnProperty('IsSpam') && hibp['IsSpam']) {
+            number.innerHTML = score;
+      
+        } 
+        if (hibp.hasOwnProperty('IsSpam') && hibp['IsSpam'] && score != 0) {
             score -= 5;
+            number.innerHTML = score;
         }
-        if (hibp.hasOwnProperty('DataClasses')) {
+        if (hibp.hasOwnProperty('DataClasses') && score != 0) {
             if (hibp['DataClasses'].includes('Passwords')) {
                 score -= 20;
+                number.innerHTML = score;
+        
+            
             }
-            if (hibp['DataClasses'].includes('Usernames')) {
+            if (hibp['DataClasses'].includes('Usernames')&& score != 0) {
                 score -= 5;
+                number.innerHTML = score;
+           
+            
             }
-            if (hibp['DataClasses'].includes('Password hints')) {
+            if (hibp['DataClasses'].includes('Password hints')&& score != 0) {
                 score -= 10;
-            }
-            if (hibp['DataClasses'].includes('Email addresses')) {
+                number.innerHTML = score;
+            } 
+            if (hibp['DataClasses'].includes('Email addresses')&& score != 0) {
                 score -= 2;
+                number.innerHTML = score;
+                
             }
         }
-    }
-    return score
+    } 
+    return number.innerHTML = score;
 }
+
+
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     console.log('Reached background');
