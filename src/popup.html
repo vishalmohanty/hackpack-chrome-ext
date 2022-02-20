@@ -1,36 +1,44 @@
-<!--
-File: popup.html
-=========================
-This file contains the HTML visible in the browser action,
-which is the window that pops up when you click the icon
-in the upper right corner of the Chrome window. Update this
-HTML file to change the layout of the content if you'd like!
-Currently, it is the TreeHacks banner.
-
-The file doesn't need to be updated for the hackpack, but
-making it look stylish can be a cool extension.
--->
-
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <h2 class="title">adobe.com</h2>
+        <div class="circle">
+          <h1>80%</h1>
+        </div>
+      </div>
 
-<style>
-body {
-  font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-  position: relative;
-  vertical-align:middle;
-  background-image: url(/icons/TreeHacksCoverPhoto.png);
-  background-size: 100% 100%;
-  min-width: 600px;
-  min-height: 200px;
-*/
-}
-</style >
+      <div class="info">
+        <div class="item">
+          <h3>Breaches</h3>
+          <p>4 October 2013</p>
+        </div>
+        <div class="item">
+          <h3>Compromised Accounts</h3>
+          <p>152,445,165</p>
+        </div>
+        <div class="item">
+          <h3>Compromised Data</h3>
+          <p>Email addresses, Password hints, Passwords, Usernames</p>
+        </div>
+      </div>
+      <div class="info-extra">
+        <div class="item">
+          <h3>Spam?</h3>
+          <p>No</p>
+        </div>
+        <div class="item">
+          <h3>Secured?</h3>
+          <p>Yes</p>
+        </div>
+      </div>
+    </div>
 
-<body>
-
-<script src="popup.js" ></script>
-
-</body>
+    <script src="popup.js"></script>
+  </body>
 </html>

@@ -2,42 +2,28 @@
   "manifest_version": 3,
   "name": "Is The Website Secure?",
   "version": "1.0",
-
   "description": "Website Security Chrome Extension @ TreeHacks 2019",
   "icons": {
-    "16": "icons/TreeHacks-white-16.png",
-    "32": "icons/TreeHacks-white-32.png",
-    "48": "icons/TreeHacks-white-48.png",
-    "64": "icons/TreeHacks-white-64.png",
-    "96": "icons/TreeHacks-white-96.png",
-    "128": "icons/TreeHacks-white-128.png"
+    "16": "assets/icon-16.png",
+    "32": "assets/icon-32.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
   },
-
-  "homepage_url": "https://www.treehacks.com/",
-
-  "permissions": [
-    "storage"
-  ],
-
+  "homepage_url": "https://github.com/vishalmohanty/hackpack-chrome-ext",
+  "permissions": ["storage"],
   "host_permissions": ["https://haveibeenpwned.com/api/v3/*"],
-
   "action": {
-    "default_icon": "icons/TreeHacks-white-19.png",
+    "default_icon": "assets/icon-128.png",
     "default_title": "Is The Website Secure?",
     "default_popup": "src/popup.html"
   },
   "content_scripts": [
     {
-      "matches": [
-        "*://*/*"
-      ],
-      "js": [
-        "/src/content.js"
-      ],
+      "matches": ["*://*/*"],
+      "js": ["/src/content.js"],
       "run_at": "document_end"
     }
   ],
-
   "background": {
     "service_worker": "src/background.js"
   }
