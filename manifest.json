@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Is The Website Secure?",
+  "name": "Mr.Watchdog",
   "version": "1.0",
-  "description": "Website Security Chrome Extension @ TreeHacks 2019",
+  "description": "Doberman with hoodie - Mr.Watchdog @ TreeHacks 2022",
   "icons": {
     "16": "assets/icon-16.png",
     "32": "assets/icon-32.png",
@@ -13,8 +13,8 @@
   "permissions": ["storage"],
   "host_permissions": ["https://haveibeenpwned.com/api/v3/*"],
   "action": {
-    "default_icon": "assets/icon-128.png",
-    "default_title": "Is The Website Secure?",
+    "default_icon": "assets/watchdog.png",
+    "default_title": "Mr.Watchdog",
     "default_popup": "src/popup.html"
   },
   "content_scripts": [
