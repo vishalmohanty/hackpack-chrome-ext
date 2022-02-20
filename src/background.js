@@ -1,48 +1,51 @@
 /** File: background.js
  * This handles the messages from page loads coming from content.js
  s*/    
- setInterval( function() { get_score(JSON); }, 30);
+//  setInterval( function() { get_score(JSON); }, 30);
 
 function get_score(json_obj) {
-    let number = document.getElementById("number");
     let score = 100;
 
-    if (json_obj.hasOwnProperty('hibp')) {
-        var hibp = json_obj['hibp']
-        if (hibp.hasOwnProperty('IsMalware') && hibp['IsMalware'] && score != 0) {
+    if (json_obj.hasOwnProperty("hibp")) {
+        var hibp = json_obj["hibp"]
+        if (hibp.hasOwnProperty("IsMalware") && hibp["IsMalware"]) {
             score -= 30;
-            number.innerHTML = score;
-      
         } 
-        if (hibp.hasOwnProperty('IsSpam') && hibp['IsSpam'] && score != 0) {
+        if (hibp.hasOwnProperty("IsSpam") && hibp["IsSpam"]) {
             score -= 5;
-            number.innerHTML = score;
         }
-        if (hibp.hasOwnProperty('DataClasses') && score != 0) {
+        if (hibp.hasOwnProperty('DataClasses')) {
             if (hibp['DataClasses'].includes('Passwords')) {
                 score -= 20;
-                number.innerHTML = score;
-        
-            
             }
-            if (hibp['DataClasses'].includes('Usernames')&& score != 0) {
+            if (hibp['DataClasses'].includes('Usernames')) {
                 score -= 5;
-                number.innerHTML = score;
-           
-            
             }
-            if (hibp['DataClasses'].includes('Password hints')&& score != 0) {
+            if (hibp['DataClasses'].includes('Password hints')) {
                 score -= 10;
-                number.innerHTML = score;
             } 
-            if (hibp['DataClasses'].includes('Email addresses')&& score != 0) {
+            if (hibp['DataClasses'].includes('Email addresses')) {
+                score -= 3;
+            }
+            if (hibp['DataClasses'].includes('Dates of birth')) {
+                score -= 1;
+            }
+            if (hibp['DataClasses'].includes('IP addresses')) {
                 score -= 2;
-                number.innerHTML = score;
-                
+            }
+            if (hibp['DataClasses'].includes('Phone numbers')) {
+                score -= 3;
+            }
+            if (hibp['DataClasses'].includes('Physical addresses')) {
+                score -= 10;
+            }
+            if (hibp['DataClasses'].includes('Names')) {
+                score -= 1;
             }
         }
     } 
-    return number.innerHTML = score;
+
+    return score;
 }
 
 
@@ -68,7 +71,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             .catch(error => console.log('Error:', error));
 
             // Get news articles by searching "webpage breach"
-            const news_api_key = '43899ab2740f419e87c9eb3f92c1c515';
+            const news_api_key = '7d0dc6f2545140938ba2881e762b24a5';
             const news_url = 'https://newsapi.org/v2/everything?q=' + webpage + '%20breach&apiKey=' + news_api_key;
             const promise2 = fetch(news_url, {
                 headers: {

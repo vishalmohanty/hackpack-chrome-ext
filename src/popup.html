@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="popup.js"></script>
   </head>
   <body>
     <div class="container">
@@ -12,10 +13,7 @@
           <div class="outerCircle">
             <div class="innerCircle">
               <div id="number">
-                
-    
-                
-    
+                64
               </div>
             </div>
           </div>
@@ -35,29 +33,32 @@
       <div class="info">
         <div class="item">
           <h3>Breaches</h3>
-          <p>4 October 2013</p>
+          <p id="breaches">None</p>
         </div>
         <div class="item">
           <h3>Compromised Accounts</h3>
-          <p>152,445,165</p>
+          <p id="c-accounts">N/A</p>
         </div>
         <div class="item">
           <h3>Compromised Data</h3>
-          <p>Email addresses, Password hints, Passwords, Usernames</p>
+          <p id="c-data">N/A</p>
         </div>
       </div>
       <div class="info-extra">
         <div class="item">
           <h3>Spam?</h3>
-          <p>No</p>
+          <p id="spam">N/A</p>
         </div>
         <div class="item">
-          <h3>Secured?</h3>
-          <p>Yes</p>
+          <h3>Malware?</h3>
+          <p id="malware">N/A</p>
         </div>
       </div>
+      <div class="news-articles">
+        <h3>Recent News</h3>
+          <p id="news1"></p>
+          <p id="news2"></p>
+      </div>
     </div>
-    <script src="background.js"></script>"
-    <script src="popup.js"></script>
   </body>
 </html>

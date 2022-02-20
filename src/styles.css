@@ -153,3 +153,9 @@ p {
   width: calc(50% - 8px);
   padding-bottom: 0;
 }
+
+.news-articles {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 24px 24px 0;
+}
