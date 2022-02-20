@@ -12,7 +12,6 @@ function get_score(json_obj) {
         if (hibp.hasOwnProperty('IsSpam') && hibp['IsSpam']) {
             score -= 5;
         }
-        debugger;
         if (hibp.hasOwnProperty('DataClasses')) {
             if (hibp['DataClasses'].includes('Passwords')) {
                 score -= 20;
