@@ -34,7 +34,7 @@ In order to do this:
 
 You should now see a screen that looks like the below:
 
-<a href="Loading Starter Code"><img src="assets/extension.png" height="500" ></a>
+<a href="Loading Starter Code"><img src="assets/extension.png"></a>
 
 
 Note that the **Developer mode** checkbox is checked, and the extension is enabled.
