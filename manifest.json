@@ -4,10 +4,10 @@
   "version": "1.0",
   "description": "Doberman with hoodie - Mr.Watchdog @ TreeHacks 2022",
   "icons": {
-    "16": "assets/icon-16.png",
-    "32": "assets/icon-32.png",
-    "48": "assets/icon-48.png",
-    "128": "assets/icon-128.png"
+    "16": "assets/watchdog.png",
+    "32": "assets/watchdog.png",
+    "48": "assets/watchdog.png",
+    "128": "assets/watchdog.png"
   },
   "homepage_url": "https://github.com/vishalmohanty/hackpack-chrome-ext",
   "permissions": ["storage"],
